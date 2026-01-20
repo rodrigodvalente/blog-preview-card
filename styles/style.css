@@ -1,10 +1,104 @@
-/* hover, box shadow, title as link */
-
 @font-face {
-    font-family: 'Figtree';
-    src: url("/blog-preview-card/fonts/Figtree-VariableFont_wght.ttf");
+  font-family: "Figtree";
+  src: url("/blog-preview-card/fonts/Figtree-VariableFont_wght.ttf");
 }
 
 html {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Figtree"
 }
+
+:root {
+  --color-yellow-bg: #f4d04e;
+  --color-black-title: #111;
+  --color-gray-description: #6b6b6b;
+  --font-weight-title: bolder;
+  --font-weight-tag: bolder;
+  --font-weight-description: 500;
+  --font-size-title: 1.5rem;
+  --font-size-description: 1rem;
+  --font-size-extra: 0.8rem;
+  --padding-default: 1.5rem;
+  --margin-default: 1.5rem;
+  --margin-secondary: 1rem;
+  --line-height-title: 150%;
+  --card-width: 384px;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-yellow-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__box {
+  width: min(var(--card-width), 80%);
+  text-align: left;
+  padding: var(--padding-default);
+  background-color: #fff;
+  border-radius: 1rem;
+  border: 1px solid black;
+  box-shadow: 8px 8px 0 black;
+}
+
+.card__image{
+    margin-bottom: var(--margin-default);
+    border-radius: .5rem;
+}
+
+.card__content{
+    display: flex;
+    flex-direction: column;
+    gap: var(--margin-default);
+}
+
+.card__tag{
+    font-size: var(--font-size-description);
+    color: var(--color-black-title);
+    font-weight: var(--font-weight-tag);
+    padding: .5rem .8rem;
+    background-color: var(--color-yellow-bg);
+    border-radius: .3rem;
+    width: min-content;
+}
+
+.card__date{
+    font-size: var(--font-size-extra);
+}
+
+.card__title{
+    font-size: var(--font-size-title);
+    font-weight: var(--font-weight-title);
+    color: var(--color-black-title);
+}
+
+.card__description{
+    font-size: var(--font-size-description);
+    color: var(--color-gray-description);
+}
+
+.author__box{
+    display: flex;
+    align-items: center;
+    gap: var(--margin-secondary);
+}
+
+.author__image{
+    width: 2rem;
+    height: 2rem;
+}
+
+.author__name{
+    font-weight: var(--font-weight-tag);
+}
+
+.card__title:hover{
+    transition: .3s;
+    color: var(--color-yellow-bg);
+}
+
+/* hover, box shadow, title as link 
+definir a largura fixa com width?
+*/
