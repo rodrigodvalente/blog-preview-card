@@ -1,0 +1,10 @@
+/* hover, box shadow, title as link */
+
+@font-face {
+    font-family: 'Figtree';
+    src: url("/blog-preview-card/fonts/Figtree-VariableFont_wght.ttf");
+}
+
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
